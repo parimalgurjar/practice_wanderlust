@@ -1,0 +1,118 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    
+    <!--- <form method="get" action="/listings/new">
+            <button>
+                create new
+            </button>
+        </form>-->
+<style>
+#filters{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.filter i{
+    color: rgb(244, 49, 121);
+    font-size: 20px;
+}
+.filter p{
+    font-size: 15px;
+}
+</style>
+
+<div id="filters">
+    <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+       <p> Treanding</p>
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-umbrella-beach"></i>
+       <p> Beach</p>
+        
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-snowflake"></i>
+      <p>  snowflake</p>
+        
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-snowflake"></i>
+  <p>      snowflake</p>
+        
+    </div>
+    
+    <div class="filter">
+        <i class="fa-solid fa-plane-departure"></i>
+        <p>plane-departure</p>
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-spa"></i>
+       <p> spa</p>
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-tree-city"></i>
+       <p> tree-city</p>
+        
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-mountain-city"></i>
+        <p>mountain city</p>
+        
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-fire"></i>
+        <p>Treanding</p>
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-umbrella-beach"></i>
+       <p> Beach</p>
+        
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-plane-departure"></i>
+        <p>plane-departure</p>
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-spa"></i>
+        <p>spa</p>
+    </div>
+    <div class="filter">
+        <i class="fa-solid fa-hotel"></i>
+        <p>hotel</p>
+        
+    </div>
+
+</div>
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%=listing._id %>" style="text-decoration: none;">
+            <div class="card">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="image..">
+                <div class="card-img-overlay">
+                    
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">
+                     <b>   <%= listing.title %></b><br>
+                        <% if (listing.price !== null && listing.price !== undefined) { %>
+                            &#8377;<%= listing.price.toLocaleString("en-IN") %>/night 
+                        <% } %>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <% } %>
+    </div>
+</body>
