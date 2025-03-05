@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+
+}
+.fa-compass{
+    color: #DF1561;
+    font-size: 3rem;
+}
+.nav-link{
+    color: #222222;
+}
+
+.f-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+    background-color: #DF1561;
+    color: white;
+    height: 8rem;
+    bottom: 0;
+   
+}
+.f-info-links a{
+    text-decoration: none;
+    color: white;
+}
+.fa-brands{
+    margin-right: 10px;
+}
+.card{
+    border: none;
+    margin-bottom: 2rem;
+}
+.card img{
+    border-radius: 1rem!important;
+    height: 19rem!important;
+}
+.card-body{
+    padding: 2px!important;
+    margin-top: 5px;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: rgb(255, 255, 255);
+}
+.add-btn{
+    background-color: #DF1561;
+    border: none;
+}
+.edit-btn{
+    background-color: #DF1561;
+    border: none;
+}
+.btn-of-edit{
+    background-color: #DF1561;
+    border: none;
+
+}
+.btn-of-edit:hover{
+   background-color: #DF1561;
+   
+}
+.show-img{
+    height: 30vh!important;
+}
